@@ -6,4 +6,17 @@
     <string name="CheckBox">Check this out!</string>
     <string name="Switch">Switch on / off </string>
     <string name="EditText">Typ your answer here</string>
+    <string name="Email">Typ email here</string>
+    <string name="TextViewEmail">Enter your email address:</string>
+    <string name="TextViewPassword">Typ your password</string>
+    <string name="Password"></string>
+    <string name="Login">LOGIN</string>
+    <string name="YourProfile">Your profile</string>
+    <string name="YourName">Your name:</string>
+    <string name="YourEmail">Your email:</string>
+    <string name="YourPicture">Your picture:</string>
+    <string name="TakePicture">Click the button above to take a picture</string>
+    <string name="Editname">Enter your name</string>
+    <string name="Editemail">Enter your email</string>
+
 </resources>
