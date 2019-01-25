@@ -29,45 +29,31 @@ public class activity_login extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 EditText loginName = (EditText) findViewById(R.id.editText);
                 editor.commit();
-                Intent intent = new Intent(activity_login.this, ContactsContract.ProfileActivity.class);
+                Intent intent = new Intent(activity_login.this, ProfileActivity.class);
                 startActivity(intent);
             }
         });
-        Log.e(ACTIVITY_NAME, "In onCreat()");
+        Log.e(ACTIVITY_NAME, "In onCreate()");
     }
 
     public void onResume(){
         super.onResume();
         SharedPreferences sharedPreferences = getSharedPreferences(
                 "LoginFile", Context.MODE_PRIVATE);
-
-        )
-
-        SharedPreferences sharedPreferences = getSharedPreferences(
-                "LoginFile", Context.MODE_PRIVATE);
-        int numTimeRun = sharedPreferences.getString("Times_run",0);
+        int numTimeRun = sharedPreferences.getInt("Times_run",0);
         EditText loginName = (EditText) findViewById(R.id.editText);
         loginName.setText( sharedPreferences.getString("DefaultEmail",""));
         Log.i(ACTIVITY_NAME, "In onCreate()");
     }
 
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         SharedPreferences sharedPreferences = getSharedPreferences(
-                "LoginFile", Context.MODE_PRIVATE)
-        )
-
-
+                "LoginFile", Context.MODE_PRIVATE);
+    }
 
     public void onStart(){
         super.onStart();
         Button loginButton = (Button)findViewById(R.id.button2);
     }
 }
-//    SharedPreferences sharedPref = getSharedPreferences(
-//            "LoginFile", Context.MODE_PRIVATE);
-//    int numTimeRun = sharedPref.getInt("TIMES_RUN", 0);
- //   EditText loginName = (EditText) findViewById(R.id.editTextLogin);
-//loginName.setText( sharedPref.getString("DefaultEmail",""));
-//
-//        Log.i(ACTIVITY_NAME, "In onCreate()");
