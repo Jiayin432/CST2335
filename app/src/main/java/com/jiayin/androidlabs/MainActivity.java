@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences(
                 "LoginFile", Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = sharedPref.edit();
-        EditText loginName = (EditText) findViewById(R.id.editText);
+        EditText loginName = (EditText) findViewById(R.id.loginEmail);
         edit.putString("DefaultEmail",loginName.getText().toString());
         edit.commit();
         Log.e(ACTIVITY_NAME, "In onPause()");

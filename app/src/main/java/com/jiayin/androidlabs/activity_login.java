@@ -35,16 +35,7 @@ public class activity_login extends AppCompatActivity {
         });
         Log.e(ACTIVITY_NAME, "In onCreate()");
     }
-    @Override
-    public void onResume(){
-        super.onResume();
-        SharedPreferences sharedPreferences = getSharedPreferences(
-                "LoginFile", Context.MODE_PRIVATE);
-        //int numTimeRun = sharedPreferences.getInt("Times_run",0);
-        EditText loginName = (EditText) findViewById(R.id.loginEmail);
-        loginName.setText( sharedPreferences.getString("DefaultEmail",""));
-        Log.i(ACTIVITY_NAME, "In onCreate()");
-    }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -58,6 +49,24 @@ public class activity_login extends AppCompatActivity {
     }
 
     @Override
+    public void onStart(){
+        super.onStart();
+        Button loginButton = (Button)findViewById(R.id.button2);
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        SharedPreferences sharedPreferences = getSharedPreferences(
+                "LoginFile", Context.MODE_PRIVATE);
+        //int numTimeRun = sharedPreferences.getInt("Times_run",0);
+        EditText loginName = (EditText) findViewById(R.id.loginEmail);
+        loginName.setText( sharedPreferences.getString("DefaultEmail",""));
+        Log.i(ACTIVITY_NAME, "In onCreate()");
+    }
+
+
+    @Override
     protected void onStop(){
         super.onStop();
         Log.e(ACTIVITY_NAME, "In onStop()");
@@ -69,9 +78,4 @@ public class activity_login extends AppCompatActivity {
         Log.e(ACTIVITY_NAME, "In onDestroy()");
     }
 
-    @Override
-    public void onStart(){
-        super.onStart();
-        Button loginButton = (Button)findViewById(R.id.button2);
-    }
 }
