@@ -27,7 +27,7 @@ public class activity_login extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences(
                         "LoginFile", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                EditText loginName = (EditText) findViewById(R.id.editText);
+                EditText loginName = (EditText) findViewById(R.id.loginEmail);
                 editor.commit();
                 Intent intent = new Intent(activity_login.this, ProfileActivity.class);
                 startActivity(intent);
@@ -35,23 +35,41 @@ public class activity_login extends AppCompatActivity {
         });
         Log.e(ACTIVITY_NAME, "In onCreate()");
     }
-
+    @Override
     public void onResume(){
         super.onResume();
         SharedPreferences sharedPreferences = getSharedPreferences(
                 "LoginFile", Context.MODE_PRIVATE);
-        int numTimeRun = sharedPreferences.getInt("Times_run",0);
-        EditText loginName = (EditText) findViewById(R.id.editText);
+        //int numTimeRun = sharedPreferences.getInt("Times_run",0);
+        EditText loginName = (EditText) findViewById(R.id.loginEmail);
         loginName.setText( sharedPreferences.getString("DefaultEmail",""));
         Log.i(ACTIVITY_NAME, "In onCreate()");
     }
-
+    @Override
     protected void onPause() {
         super.onPause();
         SharedPreferences sharedPreferences = getSharedPreferences(
                 "LoginFile", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        EditText loginName = (EditText) findViewById(R.id.loginEmail);
+        editor.putString("loginEmail", loginName.getText().toString());
+        editor.commit();
+        Log.e(ACTIVITY_NAME, "In onPause()");
     }
 
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.e(ACTIVITY_NAME, "In onStop()");
+    }
+
+    @Override
+    protected  void onDestroy(){
+        super.onDestroy();
+        Log.e(ACTIVITY_NAME, "In onDestroy()");
+    }
+
+    @Override
     public void onStart(){
         super.onStart();
         Button loginButton = (Button)findViewById(R.id.button2);
