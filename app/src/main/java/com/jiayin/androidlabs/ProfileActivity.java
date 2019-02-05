@@ -23,6 +23,20 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        captureButton = (ImageButton) findViewById(R.id.)
+        captureButton = (ImageButton) findViewById(R.id.captureButton1);
+        captureButton.setOnClickListener(new View.OnClickListener() {
+            final int CAPTURE = 1 ;
+            @Override
+            public void onClick(View v) {
+                dispatchTakePictureIntent();
+            }
+            private void dispatchTakePictureIntent(){
+                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(takePictureIntent, IMAGE_CAPTURE);
+                }
+            }
+        });
+        Log.e(ACTIVITY_NAME, "In onCreate()");
     }
 }

@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_main_relative);
 
         Button startButton = (Button)findViewById(R.id.button2);
-        startButton.setOnClickListener(new view.onClickLinstener(){
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
-                    public void onClick(View view){
+            public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, activity_login.class);
                 startActivity(intent);
             }
