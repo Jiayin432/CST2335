@@ -32,7 +32,7 @@ public class activity_login extends AppCompatActivity {
 
                 Intent intent = new Intent(activity_login.this, ProfileActivity.class);
                 String email = loginName.getText().toString();
-                intent.putExtra("LoginFile", email);
+                //intent.putExtra("LoginFile", email);
                 startActivity(intent);
             }
         });
