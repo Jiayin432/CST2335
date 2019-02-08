@@ -37,6 +37,7 @@
             android:text="@string/YourEmail"/>
 
         <EditText
+            android:id="@+id/loginEmai2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/Editemail"

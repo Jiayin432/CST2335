@@ -25,8 +25,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         String emailTyped = intent.getStringExtra("LoginFile");
 
-        //EditText editEmail = findViewById(R.id.loginEmail);
-        //editEmail.setText(emailTyped);
+        EditText editEmail = findViewById(R.id.loginEmai2);
+        editEmail.setText(emailTyped);
 
         captureButton = (ImageButton) findViewById(R.id.captureButton1);
         captureButton.setOnClickListener(new View.OnClickListener() {

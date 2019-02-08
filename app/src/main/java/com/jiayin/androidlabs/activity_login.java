@@ -21,8 +21,8 @@ public class activity_login extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(
                 "LoginFile", Context.MODE_PRIVATE);
 
-        String email = sharedPreferences.getString("LoginFile","");
-        final EditText loginName = (EditText) findViewById(R.id.loginEmail);
+        String email = sharedPreferences.getString("loginEmail","");
+        EditText loginName = (EditText) findViewById(R.id.loginEmail);
         loginName.setText(email);
 
         Button loginB = (Button) findViewById(R.id.button2);
@@ -31,8 +31,9 @@ public class activity_login extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(activity_login.this, ProfileActivity.class);
+                EditText loginName = (EditText) findViewById(R.id.loginEmail);
                 String email = loginName.getText().toString();
-                //intent.putExtra("LoginFile", email);
+                intent.putExtra("LoginFile", email);
                 startActivity(intent);
             }
         });
