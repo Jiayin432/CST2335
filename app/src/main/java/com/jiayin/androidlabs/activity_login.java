@@ -18,16 +18,21 @@ public class activity_login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        SharedPreferences sharedPreferences = getSharedPreferences(
+                "LoginFile", Context.MODE_PRIVATE);
+
+        String email = sharedPreferences.getString("LoginFile","");
+        final EditText loginName = (EditText) findViewById(R.id.loginEmail);
+        loginName.setText(email);
+
         Button loginB = (Button) findViewById(R.id.button2);
         loginB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPreferences = getSharedPreferences(
-                        "LoginFile", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                EditText loginName = (EditText) findViewById(R.id.loginEmail);
-                editor.commit();
+
                 Intent intent = new Intent(activity_login.this, ProfileActivity.class);
+                String email = loginName.getText().toString();
+                intent.putExtra("LoginFile", email);
                 startActivity(intent);
             }
         });
@@ -57,7 +62,7 @@ public class activity_login extends AppCompatActivity {
         super.onResume();
         SharedPreferences sharedPreferences = getSharedPreferences(
                 "LoginFile", Context.MODE_PRIVATE);
-        //int numTimeRun = sharedPreferences.getInt("Times_run",0);
+        int numTimeRun = sharedPreferences.getInt("Times_run",0);
         EditText loginName = (EditText) findViewById(R.id.loginEmail);
         loginName.setText( sharedPreferences.getString("DefaultEmail",""));
         Log.i(ACTIVITY_NAME, "In onCreate()");
