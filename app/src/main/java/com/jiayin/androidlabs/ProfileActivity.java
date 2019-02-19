@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.provider.MediaStore;
 
@@ -33,6 +34,16 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Button goToChatBut = (Button) findViewById(R.id.goToChatButton);
+        goToChatBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+                startActivity(intent);
+            }
+        });
         Log.e(ACTIVITY_NAME, "In onCreate()");
     }
+
 }

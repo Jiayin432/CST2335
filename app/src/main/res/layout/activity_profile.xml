@@ -13,49 +13,57 @@
         android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/YourProfile"
-        android:layout_gravity="fill"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:text="@string/YourProfile" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/YourName"
-        android:layout_gravity="fill"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:text="@string/YourName" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/Editname"
-            android:inputType= "textPersonName"/>
+            android:inputType="textPersonName" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/YourEmail"/>
+            android:text="@string/YourEmail" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/Editemail"
-            android:inputType="textWebEmailAddress"/>
+            android:inputType="textWebEmailAddress" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/YourPicture"/>
+            android:text="@string/YourPicture" />
 
         <ImageButton
             android:id="@+id/captureButton1"
-            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_width="match_parent"
             android:layout_height="@android:dimen/app_icon_size" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/TakePicture"/>
+            android:text="@string/TakePicture" />
+
+        <Button
+            android:id="@+id/goToChatButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/goToChatText" />
 
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

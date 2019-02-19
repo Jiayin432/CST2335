@@ -18,4 +18,9 @@
     <string name="TakePicture">点击上面的按钮拍照</string>
     <string name="Editname">输入你的名字</string>
     <string name="Editemail">输入你的邮箱</string>
+    <string name="goToChatText">查看表格</string>
+    <string name="buttonSend">发送</string>
+    <string name="buttonReceive">接收</string>
+    <string name="typHere">在此输入</string>
+
 </resources>
