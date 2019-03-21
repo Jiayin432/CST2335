@@ -1,62 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity"
-    android:layout_gravity="fill">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/YourProfile"
-        android:layout_gravity="fill"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/YourName"
-        android:layout_gravity="fill"/>
-
-        <EditText
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+        <TextView
+            android:id="@+id/textView_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/Editname"
-            android:inputType= "textPersonName"/>
+            android:textSize="15dp"
+            android:text="@string/Profile"/>
 
         <TextView
+            android:id="@+id/textView_name_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="@string/name"/>
+
+        <EditText
+            android:id="@+id/editText_name_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:hint="@string/ProfileName"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:id="@+id/textView_email_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
             android:text="@string/YourEmail"/>
 
         <EditText
-            android:id="@+id/loginEmai2"
+            android:id="@+id/editText_email_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/Editemail"
-            android:inputType="textWebEmailAddress"/>
+            android:textSize="30dp"
+            android:hint="@string/ProfileEmail"
+            android:inputType="textEmailAddress"/>
 
         <TextView
+            android:id="@+id/textView_picture_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/YourPicture"/>
+            android:textSize="15dp"
+            android:text="@string/Picture"/>
+
 
         <ImageButton
-            android:id="@+id/captureButton1"
+            android:id="@+id/image_clickButton_profile"
             android:layout_width="@android:dimen/app_icon_size"
-            android:layout_height="@android:dimen/app_icon_size" />
+            android:layout_height="@android:dimen/app_icon_size"
+            android:text="@string/takePhoto" />
+
 
         <TextView
+            android:id="@+id/textView_clickButton_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/TakePicture"/>
+            android:textSize="15dp"
+            android:text="@string/ButtonPicture"/>
+
+        <Button
+            android:id="@+id/ButtonGoToChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/GotoChat"/>
+
+        <Button
+            android:id="@+id/btnGotoToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnGotoToolBar" />
 
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+

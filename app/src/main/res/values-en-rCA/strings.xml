@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Android Labs</string>
-    <string name="hello_message">Here are my widgets</string>
-    <string name = "ButtonText">I\’m a button</string>
-    <string name="CheckBox">Check this out!</string>
-    <string name="Switch">Switch on / off </string>
-    <string name="EditText">Typ your answer here</string>
-    <string name="Email">Typ email here</string>
-    <string name="TextViewEmail">Enter your email address:</string>
-    <string name="TextViewPassword">Typ your password</string>
-    <string name="Password"></string>
-    <string name="Login">LOGIN</string>
-    <string name="YourProfile">Your profile</string>
-    <string name="YourName">Your name:</string>
+    <string name="hello_message">Here are my widgets:</string>
+    <string name="ButtonText">I\'m a button</string>
+    <string name="Check_box">Check this out!</string>
+    <string name="Switch">Switch on / off</string>
+    <string name="EditText">Type your answer here</string>
+    <string name="LoginText">Enter your email address：</string>
+    <string name="Email">Type email here</string>
+    <string name="password">Type your password:</string>
+    <string name="EnterPassword"></string>
+    <string name="Profile">Your profile</string>
+    <string name="name">Your name:</string>
+    <string name="ProfileEmail">Enter your email</string>
+    <string name="ProfileName">Enter your name</string>
     <string name="YourEmail">Your email:</string>
-    <string name="YourPicture">Your picture:</string>
-    <string name="TakePicture">Click the button above to take a picture</string>
-    <string name="Editname">Enter your name</string>
-    <string name="Editemail">Enter your email</string>
-
+    <string name="Picture">Your picture：</string>
+    <string name="ButtonPicture">Click the button above to take a picture</string>
+    <string name="LoginButton">Long in</string>
+    <string name="takePhoto">take picture</string>
+    <string name="GotoChat"> Go To Chat</string>
+    <string name="ButtonSendText">Send</string>
+    <string name="HintText_chat">Type here</string>
+    <string name="ButtonText_Receive">Receive</string>
+    <string name="btnGoToChat">Go to chat </string>
+    <string name="btnGotoToolBar">Go to ToolBar Page </string>
+    <string name="menuName1">Choice 1</string>
+    <string name="menuName2">Choice 2</string>
+    <string name="menuName3">Choice 3</string>
+    <string name="menuName4">About</string>
+    <string name="search">Search</string>
+    <string name="aButton">Go Back?</string>
 </resources>
