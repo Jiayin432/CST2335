@@ -31,4 +31,10 @@
     <string name="menuName4">About</string>
     <string name="search">Search</string>
     <string name="aButton">Go Back?</string>
+
+    <string name="ButGotoWeather">Go to Weather</string>
+    <string name="weatherForecast_tV_CurrentTemperature">Current Temperature</string>
+    <string name="weatherForecast_tV_MainTemperature">Main Temperature</string>
+    <string name="weatherForecast_tV_MaxTemperature">Max Temperature</string>
+    <string name="weatherForecast_tV_UVRating">UV Rating</string>
 </resources>

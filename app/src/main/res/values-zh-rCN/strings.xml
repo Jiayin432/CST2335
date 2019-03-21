@@ -31,4 +31,10 @@
     <string name="menuName4">相关</string>
     <string name="search">查找</string>
     <string name="aButton">退回?</string>
+
+    <string name="weatherForecast_tV_CurrentTemperature">现在气温</string>
+    <string name="weatherForecast_tV_MainTemperature">今日气温</string>
+    <string name="weatherForecast_tV_MaxTemperature">最高气温</string>
+    <string name="weatherForecast_tV_UVRating">UV指数</string>
+    <string name="ButGotoWeather">查看天气</string>
 </resources>
