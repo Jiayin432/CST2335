@@ -18,7 +18,6 @@ public class ProfileActivity extends AppCompatActivity {
 
     ImageButton iButton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
